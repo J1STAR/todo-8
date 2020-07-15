@@ -1,8 +1,11 @@
-import userModel from "../models/user.js";
+var userModel = require("../models/user.js");
 
 async function register(user) {
-  const res = await userModel.register(user);
-  console.log(res);
+  const res = await userModel.User.register(user);
+  return res;
 }
-
-export default { register };
+async function getAllUsers() {
+  const res = await userModel.User.getAllUsers();
+  return res;
+}
+module.exports = { register, getAllUsers };

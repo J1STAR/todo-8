@@ -5,10 +5,10 @@ module.exports = function (api) {
     [
       "@babel/preset-env",
       {
-        targets: {
-          ie: "11",
-        },
-        // targets: ">0.25%, not dead",
+        // targets: {
+        //   ie: "11",
+        // },
+        targets: ">1%, not dead",
         useBuiltIns: "usage",
         corejs: "3",
         modules: false,
